@@ -1,0 +1,17 @@
+
+.btn {
+    margin-left: 6px;
+}
+
+.markAsChecked {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.tableActions {
+    width: 105px;
+}
+
+.todoForm {
+    padding-bottom: 80px;
+}

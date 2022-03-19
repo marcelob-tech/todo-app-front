@@ -1,16 +1,18 @@
-import 'modules/bootstrap/dist/css/bootstrap.min.css'
-import 'modules/font-awesome/css/font-awesome.min.css'
+import 'modules/bootstrap/dist/css/bootstrap.min.css';
+import 'modules/font-awesome/css/font-awesome.min.css';
+import '../template/custom.css';
 
-import React from 'react'
-import Todo from '../todo/todo'
-import About from '../about/about'
+import React from 'react';
+import Menu from '../template/menu';
+import Routes from '../main/routes';
+
 
 
 const App = (props) => {
   return (
     <div className='container'>
-        <Todo/>
-        <About/>
+        <Menu/>
+        <Routes/>
     </div>
   )
 }
