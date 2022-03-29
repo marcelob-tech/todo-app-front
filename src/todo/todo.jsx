@@ -6,20 +6,20 @@ import axios from 'axios';
 
 const URL = 'http://localhost:3003/api/todos';
 export default class Todo extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { description: '', list: [] };
-        this.handleAdd = this.handleAdd.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleRemove = this.handleRemove.bind(this);
-        this.handleMarkAsDone = this.handleMarkAsDone.bind(this);
-        this.handleMarkAsPending = this.handleMarkAsPending.bind(this);
-        this.handleSearch  = this.handleSearch.bind(this);
-        this.handleClear = this.handleClear.bind(this);
-        this.tirarAcento = this.tirarAcento.bind(this);
-        this.refresh();
-    }
-
+    // constructor(props) {
+    //     super(props);
+    //     this.state = { description: '', list: [] };
+    //     this.handleAdd = this.handleAdd.bind(this);
+    //     this.handleChange = this.handleChange.bind(this);
+    //     this.handleRemove = this.handleRemove.bind(this);
+    //     this.handleMarkAsDone = this.handleMarkAsDone.bind(this);
+    //     this.handleMarkAsPending = this.handleMarkAsPending.bind(this);
+    //     this.handleSearch  = this.handleSearch.bind(this);
+    //     this.handleClear = this.handleClear.bind(this);
+    //     this.tirarAcento = this.tirarAcento.bind(this);
+    //     this.refresh();
+    // }
+ /*
     tirarAcento(text) {
         text = text.toLowerCase();
         text = text.replace(new RegExp('[ÁÀÂÃ]','gi'), 'a');
@@ -72,26 +72,14 @@ export default class Todo extends Component {
     handleClear() {
         console.log('chamando handleClear...');
         this.refresh();
-    }
+    }*/
 
     render() {
-    
         return (
             <div>
                 <PageHeader name='Tarefas' small='Cadastro' />
-                <TodoForm
-                    description={this.state.description}
-                    handleChange={this.handleChange}
-                    handleAdd={this.handleAdd}
-                    handleSearch={this.handleSearch}
-                    handleClear={this.handleClear}
-                />
-                <TodoList
-                    list={this.state.list}
-                    handleRemove={this.handleRemove}
-                    handleMarkAsDone={this.handleMarkAsDone}
-                    handleMarkAsPending={this.handleMarkAsPending}
-                />
+                <TodoForm />
+                <TodoList />
             </div>
         );
     }
