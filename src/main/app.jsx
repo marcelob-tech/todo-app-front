@@ -11,6 +11,7 @@ import Routes from '../main/routes';
 const App = (props) => {
   return (
     <div className='container'>
+      x
         <Menu/>
         <Routes/>
     </div>
